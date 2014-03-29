@@ -1,0 +1,22 @@
+[ui]
+username = Maciej Szulik <soltysh@gmail.com>
+
+[diff]
+git = on
+
+[extensions]
+mq =
+color =
+graphlog =
+
+[color]
+custom.rev = red
+custom.date = green
+custom.author = bold blue
+
+[alias]
+st = status
+ci = commit
+co = checkout
+df = diff
+lg = log -G --template "{label('custom.rev',node|short)} - {desc} {label('custom.date', sub('^', '(', sub('$', ')', date|age)))} {label('custom.author', sub('^', '<', sub('$', '>', author|person)))}"
