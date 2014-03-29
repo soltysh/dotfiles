@@ -174,3 +174,7 @@ fi
 # virutalenvwrapper configuration
 export WORKON_HOME=$HOME/.virtualenvs
 source /etc/bash_completion.d/virtualenvwrapper
+
+# bash variables
+export PATH=$HOME/usr/bin:$PATH
+export EDITOR=vim
