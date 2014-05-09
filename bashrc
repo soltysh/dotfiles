@@ -114,8 +114,12 @@ function __prompt_command()
         PS1+="\[$Color_On\][$branch]\[\033[0m\] "
     fi
 
+    if [[ "$VIRTUAL_ENV" != "" ]]; then
+        PS1+="\[\033[1;30m\]($(basename $VIRTUAL_ENV))\[\033[0m\] "
+    fi
+
     # prompt $ or # for root
-    PS1+='\$ '
+    PS1+='\n\$ '
 }
 
 if [ "$color_prompt" = yes ]; then
