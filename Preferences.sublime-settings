@@ -14,8 +14,6 @@
 		".hg",
 		".git",
 		"__pycache__",
-		"env",
-		"env3"
 	],
 	"font_size": 10,
 	"highlight_line": true,
@@ -23,9 +21,22 @@
 	[
 		"Vintage"
 	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Git",
+		"GoSublime",
+		"Mercurial",
+		"Mercurial for Sublime",
+		"Pylinter",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SyncedSideBar"
+	],
 	"rulers":
 	[
-		80
+		80,
+		100
 	],
 	"show_full_path": true,
 	"show_minimap": false,
@@ -33,7 +44,5 @@
 	"tab_completion": true,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false,
-	"wrap_width": 80
+	"trim_trailing_white_space_on_save": true
 }

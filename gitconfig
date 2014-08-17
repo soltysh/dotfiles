@@ -10,4 +10,21 @@ df = diff
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
+diff = auto
+status = auto
+branch = auto
 ui = auto
+pager = true
+
+[apply]
+whitespace = strip
+
+[credential]
+helper = cache
+
+[core]
+whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[push]
+default = matching
+

@@ -1,5 +1,5 @@
 " the next 3 lines must come first
-filetype off
+filetype on
 filetype plugin indent on
 syntax on
 
@@ -53,7 +53,7 @@ set colorcolumn=80
 " mark current line
 set cursorline
 " mark nonprintable characters
-set listchars=eol:$,tab:»·,
+set listchars=eol:$,tab:»·,trail:.,extends:>
 set list
 
 " status line
@@ -64,6 +64,12 @@ let Tlist_Use_Right_Window=1
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 let g:EnhCommentifyMultiPartBlocks = 'yes'
+
+" flag problematic whitespace (trailing and spaces before tabs)
+" Note you get the same by doing let c_space_errors=1 but
+" this rule really applies to everything.
+highlight RedundantSpaces term=standout ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t/ "\ze sets end of match so only space highlighted
 
 " map t<move> for moving between tabs
 "map tl :tabnext<CR>
@@ -122,4 +128,11 @@ au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoption
 " C: yes
 au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
 
+" Antlr syntax
 au BufRead,BufNewFile *.g,*.g4 set syntax=antlr
+
+" Set tabbing options
+autocmd FileType ruby,yaml setlocal expandtab autoindent shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.pp setlocal tabstop=4 shiftwidth=4 expandtab
+" Trim trailing whitespace from Ruby and Yaml files
+autocmd BufWritePre *.rb,*.yml,*.yaml :%s/\s\+$//e
