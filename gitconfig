@@ -1,6 +1,6 @@
 [user]
 name = Maciej Szulik
-email = soltysh@gmail.com
+email = maszulik@redhat.com
 
 [alias]
 st = status
@@ -21,6 +21,9 @@ whitespace = strip
 
 [credential]
 helper = cache
+
+[commit]
+template = /home/maszulik/.git_commit_template
 
 [core]
 whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol

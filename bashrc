@@ -179,7 +179,7 @@ fi
 
 # virutalenvwrapper configuration
 export WORKON_HOME=$HOME/.virtualenvs
-source /etc/bash_completion.d/virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 
 # bash variables
 export EDITOR=vim

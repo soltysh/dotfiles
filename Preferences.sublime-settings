@@ -13,7 +13,7 @@
 	[
 		".hg",
 		".git",
-		"__pycache__",
+		"__pycache__"
 	],
 	"font_size": 10,
 	"highlight_line": true,
@@ -29,6 +29,7 @@
 		"Mercurial",
 		"Mercurial for Sublime",
 		"Pylinter",
+		"RAML Syntax Highlighter",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SyncedSideBar"
@@ -44,5 +45,7 @@
 	"tab_completion": true,
 	"tab_size": 4,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "auto",
+	"line_numbers": true
 }
