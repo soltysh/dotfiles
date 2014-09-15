@@ -150,6 +150,40 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+function git_fetch()
+{
+    repos="$@"
+    if [ "$repos" == "" ]; then
+        repos=$(ls -d */)
+    fi
+    base_dir=$(pwd)
+    echo -e "Fetching upstream for the following repos:\n\e[1;31m"$repos"\e[0m"
+
+    for repo_name in $repos
+    do
+        if [ -d $base_dir/$repo_name ]; then
+            echo -e "\e[1;31mProcessing "$repo_name"\e[0m"
+            pushd $base_dir/$repo_name > /dev/null
+            stashed=false
+            git diff-index --quiet HEAD
+            if [ $? -ne 0 ]; then
+                git stash
+                stashed=true
+            fi
+            git checkout master
+            git fetch upstream
+            git fetch upstream --tags
+            git rebase upstream/master
+            git push origin master --force
+            git push --tags
+            if $stashed; then
+                git stash pop
+            fi
+            popd > /dev/null
+        fi
+    done
+}
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -184,7 +218,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 # bash variables
 export EDITOR=vim
 export GOPATH=$HOME/workspace/go
-export PATH=$HOME/usr/bin:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/usr/bin:$HOME/.rbenv/bin:$GOPATH/bin:$PATH
 eval "$(rbenv init -)"
 
