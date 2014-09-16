@@ -56,35 +56,35 @@ fi
 function __prompt_command()
 {
     # default colors
-    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u@\h\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
 
     EXIT="$?"
     PS1=""
 
     # command history number in green if ok, red - if not
-    if [ $EXIT -eq 0 ]; then PS1+="\[\033[32m\][\!]\[\033[0m\] "; else PS1+="\[\033[31m\][\!]\[\033[0m\] "; fi
+    if [ $EXIT -eq 0 ]; then PS1+="\[\e[32m\][\!]\[\e[0m\] "; else PS1+="\[\e[31m\][\!]\[\e[0m\] "; fi
 
     # if logged in via ssh shows the ip of the client
-    # if [ -n "$SSH_CLIENT" ]; then PS1+="\[\033[1;33m\](${SSH_CLIENT/ */})\[\033[0m\] "; fi
+    # if [ -n "$SSH_CLIENT" ]; then PS1+="\[\e[1;33m\](${SSH_CLIENT/ */})\[\e[0m\] "; fi
 
     # debian chroot stuff (take it or leave it)
     PS1+='${debian_chroot:+($debian_chroot)}'
 
     # basic information (user@host:path)
-    PS1+='\[\033[32m\]\u\[\033[0m\]@\[\033[32m\]\h\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\] '
+    PS1+='\[\e[32m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\] '
 
     # add git display to prompt
     local git_status="`git status -unormal 2>&1`"
     if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
         # repository in unmodified state
         if [[ "$git_status" =~ nothing\ to\ commit ]]; then
-            local Color_On="\033[32m"
+            local Color_On="\e[32m"
         # modified files already present in repository
         elif [[ "$git_status" =~ no\ changes\ added\ to\ commit ]]; then
-            local Color_On="\033[35m"
+            local Color_On="\e[35m"
         # new files in repository
         else
-            local Color_On="\033[31m"
+            local Color_On="\e[31m"
         fi
         # brach info
         if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
@@ -93,7 +93,7 @@ function __prompt_command()
             # Detached HEAD. (branch=HEAD is a faster alternative.)
             branch="`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`"
         fi
-        PS1+="\[$Color_On\][$branch]\[\033[0m\] "
+        PS1+="\[$Color_On\][$branch]\[\e[0m\] "
     fi
 
     # add mercurial display to prompt
@@ -101,21 +101,21 @@ function __prompt_command()
     if ! [[ "$hg_status" =~ no\ repository\ found ]]; then
         # repository in unmodified state
         if [[ "$hg_status" == "" ]]; then
-            local Color_On="\033[32m"
+            local Color_On="\e[32m"
         # modified files already present in repository
         elif [[ "$hg_status" =~ ^M\  ]]; then
-            local Color_On="\033[35m"
+            local Color_On="\e[35m"
         # new files in repository
         else
-            local Color_On="\033[31m"
+            local Color_On="\e[31m"
         fi
         # branch info
         branch="`hg branch 2> /dev/null || echo HEAD`"
-        PS1+="\[$Color_On\][$branch]\[\033[0m\] "
+        PS1+="\[$Color_On\][$branch]\[\e[0m\] "
     fi
 
     if [[ "$VIRTUAL_ENV" != "" ]]; then
-        PS1+="\[\033[1;30m\]($(basename $VIRTUAL_ENV))\[\033[0m\] "
+        PS1+="\[\e[1;30m\]($(basename $VIRTUAL_ENV))\[\e[0m\] "
     fi
 
     # prompt $ or # for root
