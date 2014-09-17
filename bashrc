@@ -150,7 +150,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-function git_fetch()
+function git-fetch()
 {
     repos="$@"
     if [ "$repos" == "" ]; then
