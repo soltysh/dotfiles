@@ -1,4 +1,6 @@
 {
     "draw_centered": true,
-    "word_wrap": "auto"
+    "word_wrap": "auto",
+    "line_numbers": "true",
+    "gutter": "true"
 }
