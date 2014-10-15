@@ -32,7 +32,8 @@
 		"RAML Syntax Highlighter",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
-		"SyncedSideBar"
+		"SyncedSideBar",
+		"Dockerfile Syntax Highlighting"
 	],
 	"line_numbers": true,
 	"rulers":
