@@ -33,7 +33,8 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SyncedSideBar",
-		"Dockerfile Syntax Highlighting"
+		"Dockerfile Syntax Highlighting",
+		"Markdown Preview"
 	],
 	"line_numbers": true,
 	"rulers":
