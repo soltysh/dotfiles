@@ -32,6 +32,7 @@ files=(
   ["systemd/openbox.service"]=".config/systemd/user/openbox.service"
   ["systemd/xorg@.service"]=".config/systemd/user/xorg@.service"
   ["systemd/xorg@.socket"]=".config/systemd/user/xorg@.socket"
+  ["i3/config"]=".i3/config"
 )
 
 for file in "${!files[@]}"
