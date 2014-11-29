@@ -33,6 +33,7 @@ files=(
   ["systemd/xorg@.service"]=".config/systemd/user/xorg@.service"
   ["systemd/xorg@.socket"]=".config/systemd/user/xorg@.socket"
   ["i3/config"]=".i3/config"
+  ["i3/i3status.conf"]=".i3/i3status.conf"
 )
 
 for file in "${!files[@]}"
