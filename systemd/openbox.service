@@ -1,0 +1,15 @@
+[Unit]
+Description=Openbox window manager
+Wants=graphical.target
+After=xorg@0.service
+Requires=xorg@0.service
+
+[Service]
+ExecStart=/usr/bin/openbox
+ExecReload=/usr/bin/opebox --reload
+ExecStop=/usr/bin/openbox --exit
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
