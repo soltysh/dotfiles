@@ -19,6 +19,7 @@ files=(
   ["gtkrc-2.0-kde4"]=".gtkrc-2.0-kde4"
   ["hgrc"]=".hgrc"
   ["vimrc"]=".vimrc"
+  ["Xdefaults"]=".Xdefaults"
   ["sublime/Default (Linux).sublime-keymap"]=".config/sublime/Default (Linux).sublime-keymap"
   ["sublime/Distraction Free.sublime-settings"]=".config/sublime/Distraction Free.sublime-settings"
   ["sublime/Preferences.sublime-settings"]=".config/sublime/Preferences.sublime-settings"
