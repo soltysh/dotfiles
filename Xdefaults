@@ -13,8 +13,6 @@ URxvt*saveLines : 12000
 URxvt*fading : 30
 ! start as a login shell by prepending a - to argv[0] of the shell
 URxvt.loginShell : true
-! line spacing
-URxvt.letterSpace : -1
 
 ! scroll
 URxvt*scrollBar   : false
