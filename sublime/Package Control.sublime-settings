@@ -1,0 +1,17 @@
+{
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"Dockerfile Syntax Highlighting",
+		"Git",
+		"GoSublime",
+		"Markdown Preview",
+		"Mercurial",
+		"Mercurial for Sublime",
+		"Pylinter",
+		"RAML Syntax Highlighter",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SyncedSideBar"
+	]
+}
