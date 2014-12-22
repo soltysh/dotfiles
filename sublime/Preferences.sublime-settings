@@ -13,7 +13,8 @@
 	[
 		".hg",
 		".git",
-		"__pycache__"
+		"__pycache__",
+		"_output"
 	],
 	"font_size": 10,
 	"highlight_line": true,
