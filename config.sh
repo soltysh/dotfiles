@@ -16,7 +16,6 @@ files=(
     ["ackrc"]=".ackrc"
     ["bashrc"]=".bashrc"
     ["gitconfig"]=".gitconfig"
-    ["gtkrc-2.0-kde4"]=".gtkrc-2.0-kde4"
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
     ["Xdefaults"]=".Xdefaults"
