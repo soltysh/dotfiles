@@ -2,13 +2,13 @@
 URxvt*font     : xft:Monospace:pixelsize=12
 URxvt*boldFont : xft:Monospace:pixelsize=12
 
-! clickable urls
-URxvt.perl-ext-common : default,matcher
+! clickable urls & selection to clipboard by default
+URxvt.perl-ext-common : default,matcher,selection-to-clipboard
 URxvt.urlLauncher     : firefox
 URxvt.matcher.button  : 2
 
 ! save number lines in the scrollback buffer
-URxvt*saveLines : 12000
+URxvt*saveLines : 9999
 ! fade when focus lost
 URxvt*fading : 30
 ! start as a login shell by prepending a - to argv[0] of the shell
@@ -23,6 +23,12 @@ URxvt*scrollTtyOutput : false
 URxvt*scrollWithBuffer : true
 ! scroll to bottom when a non-special key is pressed
 URxvt*scrollTtyKeypress : true
+! disable buffer in secondary screen (eg. less)
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+! disable iso14755 mode
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
 ! colors
 URxvt*background: #000000
