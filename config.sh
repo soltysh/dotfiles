@@ -11,7 +11,6 @@ link() {
 }
 
 declare -A files
-
 files=(
     ["ackrc"]=".ackrc"
     ["bashrc"]=".bashrc"
@@ -38,8 +37,18 @@ files=(
     ["gtk/settings3.ini"]=".config/gtk-3.0/settings.ini"
 )
 
+declare -A cpfiles
+cpfiles=(
+    ["i3/i3exit"]="/usr/local/bin"
+)
+
 for file in "${!files[@]}"
 do
     link "$(pwd)/${file}" "${HOME}/${files[${file}]}"
+done
+
+for file in "${!cpfiles[@]}"
+do
+    cp -v "$(pwd)/${file}" "${cpfiles[${file}]}"
 done
 
