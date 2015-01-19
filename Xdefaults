@@ -58,3 +58,8 @@ URxvt.color14 : #55FFFF
 URxvt.color7  : #AAAAAA
 URxvt.color15 : #FFFFFF
 
+! More colors 
+URxvt.colorIT : #87af5f
+URxvt.colorBD : #d7d7d7
+URxvt.colorUL : #87afd7
+
