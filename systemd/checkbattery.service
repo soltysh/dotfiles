@@ -1,0 +1,7 @@
+[Unit]
+Description=Battery checker
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/checkbattery
+

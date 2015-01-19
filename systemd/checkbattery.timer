@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery checker
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=60
+Unit=checkbattery.service
+
+[Install]
+WantedBy=default.target
+

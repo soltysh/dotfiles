@@ -31,6 +31,8 @@ files=(
     ["systemd/i3.service"]=".config/systemd/user/i3.service"
     ["systemd/xorg@.service"]=".config/systemd/user/xorg@.service"
     ["systemd/xorg@.socket"]=".config/systemd/user/xorg@.socket"
+    ["systemd/checkbattery.service"]=".config/systemd/user/checkbattery.service"
+    ["systemd/checkbattery.timer"]=".config/systemd/user/checkbattery.timer"
     ["i3/config"]=".i3/config"
     ["i3/i3status.conf"]=".i3/i3status.conf"
     ["gtk/gtkrc-2.0"]=".gtkrc-2.0"
@@ -40,6 +42,7 @@ files=(
 declare -A cpfiles
 cpfiles=(
     ["i3/i3exit"]="/usr/local/bin"
+    ["i3/checkbattery"]="/usr/local/bin"
 )
 
 for file in "${!files[@]}"

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+threshold=10
+
+hibernate() {
+    i3-nagbar -m "Battery level less then "$threshold"%, turning off in 30sec!" &
+    sleep 30
+    sudo systemctl poweroff
+}
+
+cap=$(cat /sys/class/power_supply/BAT1/capacity)
+if [ "$cap" -le "$threshold" ]
+then
+    hibernate
+fi
+

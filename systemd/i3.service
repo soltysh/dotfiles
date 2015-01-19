@@ -1,5 +1,5 @@
 [Unit]
-Description=Openbox window manager
+Description=i3 window manager
 Wants=graphical.target
 After=xorg@0.service
 Requires=xorg@0.service
@@ -11,3 +11,4 @@ RestartSec=10
 
 [Install]
 WantedBy=default.target
+
