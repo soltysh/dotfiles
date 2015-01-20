@@ -1,6 +1,14 @@
+! Xft settings
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.autohint:  true
+Xft.hintstyle: hintfull
+
 ! font
 URxvt*font     : xft:Monospace:pixelsize=12
 URxvt*boldFont : xft:Monospace:pixelsize=12
+URxvt.letterSpace: -1
 
 ! clickable urls & selection to clipboard by default
 URxvt.perl-ext-common : default,matcher,selection-to-clipboard
@@ -32,31 +40,31 @@ URxvt.iso14755_52: false
 
 ! colors
 URxvt*background: #000000
-URxvt*foreground: #ffffff
+URxvt*foreground: #b2b2b2
 ! black
 URxvt.color0  : #000000
-URxvt.color8  : #555555
+URxvt.color8  : #686868
 ! red
-URxvt.color1  : #AA0000
-URxvt.color9  : #FF5555
+URxvt.color1  : #b21818
+URxvt.color9  : #ff5454
 ! green
-URxvt.color2  : #00AA00
-URxvt.color10 : #55FF55
+URxvt.color2  : #18b218
+URxvt.color10 : #54ff54
 ! yellow
-URxvt.color3  : #AA5500
-URxvt.color11 : #FFFF55
+URxvt.color3  : #b25818
+URxvt.color11 : #ffff54
 ! blue
-URxvt.color4  : #0000AA
-URxvt.color12 : #5555FF
+URxvt.color4  : #1818b2
+URxvt.color12 : #5454ff
 ! magenta
-URxvt.color5  : #AA00AA
-URxvt.color13 : #FF55FF
+URxvt.color5  : #b218b2
+URxvt.color13 : #ff54ff
 ! cyan
-URxvt.color6  : #00AAAA
-URxvt.color14 : #55FFFF
+URxvt.color6  : #18b2b2
+URxvt.color14 : #54ffff
 ! white
-URxvt.color7  : #AAAAAA
-URxvt.color15 : #FFFFFF
+URxvt.color7  : #b2b2b2
+URxvt.color15 : #ffffff
 
 ! More colors 
 URxvt.colorIT : #87af5f
