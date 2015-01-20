@@ -18,6 +18,7 @@ files=(
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
     ["Xdefaults"]=".Xdefaults"
+    ["fonts.conf"]=".fonts.conf"
     ["sublime/Default (Linux).sublime-keymap"]=".config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
     ["sublime/Distraction Free.sublime-settings"]=".config/sublime-text-3/Packages/User/Distraction Free.sublime-settings"
     ["sublime/GoSublime.sublime-settings"]=".config/sublime-text-3/Packages/User/GoSublime.sublime-settings"
