@@ -35,7 +35,8 @@
 		"SublimeCodeIntel",
 		"SyncedSideBar",
 		"Dockerfile Syntax Highlighting",
-		"Markdown Preview"
+		"Markdown Preview",
+		"AsciiDoc"
 	],
 	"line_numbers": true,
 	"rulers":

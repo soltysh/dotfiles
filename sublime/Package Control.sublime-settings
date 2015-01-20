@@ -1,13 +1,24 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"ssl-linux"
+	],
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"AsciiDoc",
 		"Dockerfile Syntax Highlighting",
 		"Git",
 		"GoSublime",
 		"Markdown Preview",
 		"Mercurial",
 		"Mercurial for Sublime",
+		"Package Control",
 		"Pylinter",
 		"RAML Syntax Highlighter",
 		"SideBarEnhancements",
