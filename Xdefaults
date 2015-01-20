@@ -1,14 +1,6 @@
-! Xft settings
-Xft.antialias: true
-Xft.rgba: rgb
-Xft.hinting: true
-Xft.autohint:  true
-Xft.hintstyle: hintfull
-
 ! font
 URxvt*font     : xft:Monospace:pixelsize=12
 URxvt*boldFont : xft:Monospace:pixelsize=12
-URxvt.letterSpace: -1
 
 ! clickable urls & selection to clipboard by default
 URxvt.perl-ext-common : default,matcher,selection-to-clipboard
