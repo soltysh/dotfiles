@@ -78,7 +78,7 @@ bindsym $mod+1 workspace 1:shell
 bindsym $mod+2 workspace 2:sublime
 bindsym $mod+3 workspace 3:web
 bindsym $mod+4 workspace 4:mail
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace 5:cmus
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -167,6 +167,7 @@ assign [class="Thunderbird"] 4:mail
 # forcing float
 for_window [window_role="Preferences"] floating enable
 for_window [window_role="Msgcompose"] floating enable
+for_window [window_role="Calendar"] floating enable
 
 # monitor standby
 exec --no-startup-id xset dpms 300
