@@ -8,8 +8,8 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! font
-URxvt*font     : xft:Monospace:pixelsize=12
-URxvt*boldFont : xft:Monospace:pixelsize=12
+URxvt*font     : xft:DejaVu Sans Mono:pixelsize=12
+URxvt*boldFont : xft:DejaVu Sans Mono:pixelsize=12
 URxvt.letterSpace: -2
 
 ! clickable urls & selection to clipboard by default
