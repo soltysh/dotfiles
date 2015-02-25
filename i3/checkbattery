@@ -2,14 +2,22 @@
 
 threshold=10
 
+is_battery_ok() {
+    cap=$(cat /sys/class/power_supply/BAT1/capacity)
+    stat=$(cat /sys/class/power_supply/BAT1/status)
+    [ "$cap" -ge "$threshold" ] || [ "$stat" == "Charging" ]
+}
+
 hibernate() {
     i3-nagbar -m "Battery level less then "$threshold"%, turning off in 30sec!" &
     sleep 30
-    sudo systemctl poweroff
+    if ! is_battery_ok
+    then
+        sudo systemctl poweroff
+    fi
 }
 
-cap=$(cat /sys/class/power_supply/BAT1/capacity)
-if [ "$cap" -le "$threshold" ]
+if ! is_battery_ok
 then
     hibernate
 fi
