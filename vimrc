@@ -9,6 +9,8 @@ set fileencoding=utf-8
 " list of file encodings to be matched when opening
 set fileencodings=utf-8,latin-2,latin-1
 
+" full mouse support
+set mouse=a
 " use vim improvments over vi compatible mode
 set nocompatible
 " line numbers
@@ -20,7 +22,7 @@ set shiftwidth=4
 set autoindent
 " insert newlines in C-like languages
 set smartindent
-" insert some amout of tabs
+" insert some amount of tabs
 set smarttab
 " show title
 set title
