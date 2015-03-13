@@ -14,7 +14,6 @@ declare -A files
 files=(
     ["ackrc"]=".ackrc"
     ["bashrc"]=".bashrc"
-    ["zshrc"]=".zshrc"
     ["gitconfig"]=".gitconfig"
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
