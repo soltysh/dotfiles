@@ -159,7 +159,6 @@ hide_edge_borders both
 focus_follows_mouse no
 
 # workspace assignment
-assign [class="URxvt"] 1:shell
 assign [class="Sublime"] 2:sublime
 assign [class="Firefox"] 3:web
 assign [class="Thunderbird"] 4:mail
