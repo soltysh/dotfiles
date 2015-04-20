@@ -198,7 +198,7 @@ alias ack='ack-grep'
 alias t='todo.sh -d $HOME/.config/todo/config'
 complete -F _todo t
 
-alias dates='date; TZ="America/New_York" date; TZ="America/Los_Angeles" date'
+alias dates='TZ="Asia/Shanghai" date; date; TZ="America/New_York" date; TZ="America/Los_Angeles" date'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
