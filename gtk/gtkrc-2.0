@@ -1,3 +1,9 @@
-#gtk-theme-name = "MediterraneanLight"
-gtk-font-name = "DejaVu Sans 9"
-#gtk-icon-theme-name = "Faenza-Dark"
+include "/usr/share/themes/QtCurve/gtk-2.0/gtkrc"
+
+style "user-font" {
+	font_name = "DejaVu Sans 9"
+}
+
+widget_class "*" style "user-font"
+
+gtk-font-name="DejaVu Sans 9"
