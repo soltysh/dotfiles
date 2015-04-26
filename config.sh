@@ -17,7 +17,6 @@ files=(
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
     ["Xdefaults"]=".Xdefaults"
-    ["fonts.conf"]=".fonts.conf"
     ["bash/bash_profile"]=".bash_profile"
     ["bash/bashrc"]=".bashrc"
     ["sublime/Default (Linux).sublime-keymap"]=".config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
