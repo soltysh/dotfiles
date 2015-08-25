@@ -176,4 +176,7 @@ for_window [class="Skype"] floating enable
 exec --no-startup-id xset dpms 300
 # clipit
 exec --no-startup-id clipit &
-
+# devmon
+exec --no-startup-id devmon &
+# nm-applet
+exec --no-startup-id nm-applet &
