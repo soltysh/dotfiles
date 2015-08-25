@@ -8,6 +8,8 @@ git = on
 mq =
 color =
 graphlog =
+bookmarks =
+rebase =
 
 [color]
 custom.rev = red

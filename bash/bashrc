@@ -86,8 +86,9 @@ function __prompt_command()
             local Color_On="\e[31m"
         fi
         # branch info
-        branch="`hg branch 2> /dev/null || echo HEAD`"
-        PS1+="\[$Color_On\][$branch]\[\e[0m\] "
+        branch="`hg branch 2> /dev/null | awk '{ printf $1 }'`"
+        bookmark="`hg bookmarks 2> /dev/null | awk ' /\*/ { printf $2 \"@\" }'`"
+        PS1+="\[$Color_On\][$bookmark$branch]\[\e[0m\] "
     fi
 
     if [[ "$VIRTUAL_ENV" != "" ]]; then
