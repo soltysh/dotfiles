@@ -1,9 +1,9 @@
 ! xft configs
 Xft.autohint: 0
-Xft.dpi: 102
-Xft.antialias: true
+Xft.dpi: 96
+Xft.antialias: 1
 Xft.rgba: rgb
-Xft.hinting: true
+Xft.hinting: 1
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
@@ -41,8 +41,8 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 ! colors
-URxvt*background: #000000
-URxvt*foreground: #b2b2b2
+URxvt*background: #080808
+URxvt*foreground: #c2c2c2
 ! black
 URxvt.color0  : #000000
 URxvt.color8  : #686868
@@ -68,7 +68,7 @@ URxvt.color14 : #54ffff
 URxvt.color7  : #b2b2b2
 URxvt.color15 : #ffffff
 
-! More colors 
+! More colors
 URxvt.colorIT : #87af5f
 URxvt.colorBD : #d7d7d7
 URxvt.colorUL : #87afd7
