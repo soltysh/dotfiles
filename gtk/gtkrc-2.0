@@ -1,9 +1,19 @@
-include "/usr/share/themes/oxygen-gtk/gtk-2.0/gtkrc"
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-style "user-font" {
-	font_name = "DejaVu Sans 9"
-}
-
-widget_class "*" style "user-font"
-
+gtk-theme-name="MediterraneanWhiteNight"
+gtk-icon-theme-name="Adwaita"
 gtk-font-name="DejaVu Sans 9"
+gtk-cursor-theme-name="Adwaita"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=0
+gtk-menu-images=0
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"
+include "/home/maszulik/.gtkrc-2.0.mine"
