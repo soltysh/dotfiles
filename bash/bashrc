@@ -165,7 +165,6 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias ack='ack-grep'
 alias t='todo.sh -d $HOME/.config/todo/config'
 complete -F _todo t
 
@@ -173,11 +172,15 @@ alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; date; TZ="Am
 
 # virutalenvwrapper configuration
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # bash variables
 export EDITOR=vim
 export GOPATH=$HOME/workspace/go
-export PATH=$HOME/usr/bin:$HOME/.rbenv/bin:$GOPATH/bin:$PATH
-eval "$(rbenv init -)"
+export GOROOT=/usr/local/go
+export PATH=$HOME/usr/bin:$GOPATH/bin:$PATH
+
+export LIBVIRT_DEFAULT_URI=qemu:///system
+export KUBERNETES_PROVIDER=vagrant
+export VAGRANT_DEFAULT_PROVIDER=libvirt
 
