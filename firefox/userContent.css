@@ -1,0 +1,11 @@
+/*
+* Use this css file to eliminate problems in Firefox
+* when using dark themes that create dark on dark
+* input boxes, selection menus and buttons. Put this
+* in the ../firefox/default/chrome folder or your
+* individual user firefox profile chrome folder.
+*/
+input[type="radio"],
+input[type="checkbox"] {
+    -moz-appearance: none !important;
+}

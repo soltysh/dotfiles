@@ -34,6 +34,7 @@ files=(
     ["i3/i3status.conf"]=".i3/i3status.conf"
     ["gtk/gtkrc-2.0"]=".gtkrc-2.0"
     ["gtk/settings3.ini"]=".config/gtk-3.0/settings.ini"
+    ["firefox/userContent.css"]=".mozilla/firefox/*.default/chrome/userContent.css"
 )
 
 declare -A cpfiles
