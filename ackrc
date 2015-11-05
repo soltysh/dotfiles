@@ -24,6 +24,7 @@
 --ignore-directory=is:.metadata
 --ignore-directory=is:_output
 --ignore-directory=is:Godeps
+--ignore-directory=is:assets
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
 --ignore-file=match:/^#.+#$/
