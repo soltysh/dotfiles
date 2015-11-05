@@ -14,10 +14,11 @@
 		".hg",
 		".git",
 		"__pycache__",
-		"_output"
+		"_output",
+		"_workspace/bin",
+		"_workspace/pkg"
 	],
-	"font_face": "DejaVu Sans Mono",
-	"font_size": 10,
+	"font_face": "Inconsolata",
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -26,18 +27,16 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"AsciiDoc",
 		"Git",
 		"GoSublime",
+		"Markdown Preview",
 		"Mercurial",
 		"Mercurial for Sublime",
-		"Pylinter",
-		"RAML Syntax Highlighter",
+		"Package Control",
 		"SideBarEnhancements",
-		"SublimeCodeIntel",
 		"SyncedSideBar",
-		"Dockerfile Syntax Highlighting",
-		"Markdown Preview",
-		"AsciiDoc"
+		"VCS Gutter"
 	],
 	"line_numbers": true,
 	"rulers":

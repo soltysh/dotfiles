@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -6,17 +7,14 @@
 	[
 		"All Autocomplete",
 		"AsciiDoc",
-		"Dockerfile Syntax Highlighting",
 		"Git",
 		"GoSublime",
 		"Markdown Preview",
 		"Mercurial",
 		"Mercurial for Sublime",
 		"Package Control",
-		"Pylinter",
-		"RAML Syntax Highlighter",
 		"SideBarEnhancements",
-		"SublimeCodeIntel",
-		"SyncedSideBar"
+		"SyncedSideBar",
+		"VCS Gutter"
 	]
 }
