@@ -177,7 +177,6 @@ source /usr/bin/virtualenvwrapper.sh
 # bash variables
 export EDITOR=vim
 export GOPATH=$HOME/workspace/go
-export GOROOT=/usr/local/go
 export PATH=$HOME/usr/bin:$GOPATH/bin:$PATH
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
