@@ -181,3 +181,6 @@ exec --no-startup-id xset dpms 300
 exec --no-startup-id clipit &
 # nm-applet
 exec --no-startup-id nm-applet &
+# Xbindkeys
+exec --no-startup-id xbindkeys
+

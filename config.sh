@@ -18,6 +18,7 @@ files=(
     ["vimrc"]=".vimrc"
     ["Xdefaults"]=".Xdefaults"
     ["fonts.conf"]=".config/fontconfig/fonts.conf"
+    ["xbindkeysrc"]=".xbindkeysrc"
     ["bash/bash_profile"]=".bash_profile"
     ["bash/bashrc"]=".bashrc"
     ["sublime/Default (Linux).sublime-keymap"]=".config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap"
