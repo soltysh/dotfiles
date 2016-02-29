@@ -171,10 +171,14 @@ alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; date; TZ="Am
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
+# go settings
+export GOPATH=$HOME/workspace/origin
+alias goorigin='export GOPATH=$HOME/workspace/origin'
+alias gok8s='export GOPATH=$HOME/workspace/k8s'
+
 # bash variables
 export EDITOR=vim
-export GOPATH=$HOME/workspace/go
-export PATH=$HOME/usr/bin:$GOPATH/bin:$PATH
+export PATH=$HOME/usr/bin:$PATH
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
 export KUBERNETES_PROVIDER=vagrant

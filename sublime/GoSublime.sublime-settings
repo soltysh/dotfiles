@@ -3,5 +3,5 @@
 	"install_version": "r13.12.26-3",
 	"version": "r13.12.26-3",
 	"shell": ["bin/bash"],
-	"env": {"GOPATH": "/home/maszulik/workspace/go/"}
+	"env": {"GOPATH": "$HOME/workspace/go", "PATH": "$GOPATH/bin:$PATH" }
 }
