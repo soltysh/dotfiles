@@ -30,6 +30,7 @@ files=(
     ["sublime/Package Control.sublime-settings"]=".config/sublime-text-3/Packages/User/Package Control.sublime-settings"
     ["sublime/Preferences.sublime-settings"]=".config/sublime-text-3/Packages/User/Preferences.sublime-settings"
     ["sublime/Side Bar.sublime-settings"]=".config/sublime-text-3/Packages/User/Side Bar.sublime-settings"
+    ["sublime/SearchInProject.sublime-settings"]=".config/sublime-text-3/Packages/User/SearchInProject.sublime-settings"
     ["i3/config"]=".i3/config"
     ["i3/i3status.conf"]=".i3/i3status.conf"
     ["gtk/gtkrc-2.0"]=".gtkrc-2.0"
