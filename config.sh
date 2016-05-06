@@ -13,6 +13,7 @@ link() {
 declare -A files
 files=(
     ["ackrc"]=".ackrc"
+    ["ptconfig.toml"]=".ptconfig.toml"
     ["gitconfig"]=".gitconfig"
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
