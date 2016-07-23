@@ -10,6 +10,10 @@ color =
 graphlog =
 bookmarks =
 rebase =
+pager =
+
+[pager]
+pager = LESS='FRX' less
 
 [color]
 custom.rev = red
