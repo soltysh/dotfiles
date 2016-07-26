@@ -173,8 +173,14 @@ source /usr/bin/virtualenvwrapper.sh
 
 # go settings
 export GOPATH=$HOME/workspace/origin
-alias goorigin='export GOPATH=$HOME/workspace/origin'
-alias gok8s='export GOPATH=$HOME/workspace/k8s'
+goorigin() {
+    export GOPATH=$HOME/workspace/origin
+    cd $GOPATH/src/github.com/openshift/origin
+}
+gok8s() {
+    export GOPATH=$HOME/workspace/k8s
+    cd $GOPATH/src/k8s.io/kubernetes
+}
 
 # bash variables
 export EDITOR=vim
