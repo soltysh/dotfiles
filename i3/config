@@ -77,7 +77,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+1 workspace 1:shell
 bindsym $mod+2 workspace 2:sublime
 bindsym $mod+3 workspace 3:web
-bindsym $mod+4 workspace 4:mail
+bindsym $mod+4 workspace 4:slack
 bindsym $mod+5 workspace 5:cmus
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -89,7 +89,7 @@ bindsym $mod+0 workspace 10
 bindsym $mod+Shift+1 move container to workspace 1:shell
 bindsym $mod+Shift+2 move container to workspace 2:sublime
 bindsym $mod+Shift+3 move container to workspace 3:web
-bindsym $mod+Shift+4 move container to workspace 4:mail
+bindsym $mod+Shift+4 move container to workspace 4:slack
 bindsym $mod+Shift+5 move container to workspace 5:cmus
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -165,7 +165,7 @@ new_window 1pixel
 # workspace assignment
 assign [class="Sublime"] 2:sublime
 assign [class="Firefox"] 3:web
-assign [class="Thunderbird"] 4:mail
+assign [class="Slack"] 4:slack
 
 # forcing float
 for_window [window_role="Preferences"] floating enable
@@ -174,6 +174,8 @@ for_window [window_role="Msgcompose"] floating enable
 for_window [window_role="Event.*Dialog"] floating enable
 for_window [window_role="search"] floating enable
 for_window [class="Skype"] floating enable
+for_window [class="zoom" title="Zoom Group Chat"] floating enable
+for_window [class="zoom" title="Participants"] floating enable
 
 # monitor standby
 exec --no-startup-id xset dpms 300
