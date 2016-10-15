@@ -26,4 +26,5 @@ st = status
 ci = commit
 co = checkout
 df = diff
+branchdf = diff -r "max(ancestors('$1') and branch(default)):'$1'"
 lg = log -G --template "{label('custom.rev',node|short)} - {desc} {label('custom.date', sub('^', '(', sub('$', ')', date|age)))} {label('custom.author', sub('^', '<', sub('$', '>', author|person)))}"
