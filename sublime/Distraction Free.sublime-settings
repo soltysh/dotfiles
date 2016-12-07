@@ -1,6 +1,6 @@
 {
     "draw_centered": true,
     "word_wrap": "auto",
-    "line_numbers": "true",
+    "line_numbers": true,
     "gutter": "true"
 }
