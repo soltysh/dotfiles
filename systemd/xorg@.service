@@ -8,5 +8,5 @@ After=xorg@%i.socket
 Type=simple
 SuccessExitStatus=0 1
 
-ExecStart=/usr/bin/Xorg :%i -nolisten tcp -noreset -verbose 2 "vt7"
+ExecStart=/usr/bin/Xorg :%i -nolisten tcp -noreset -verbose 2 "vt1"
 
