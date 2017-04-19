@@ -16,9 +16,11 @@
 		"__pycache__",
 		"_output",
 		"_workspace/bin",
-		"_workspace/pkg"
+		"_workspace/pkg",
+		"bazel-*"
 	],
 	"font_face": "Inconsolata",
+	"font_size": 10,
 	"highlight_line": true,
 	"ignored_packages":
 	[
