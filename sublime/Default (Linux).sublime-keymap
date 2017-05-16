@@ -1,4 +1,5 @@
 [
     { "keys": ["ctrl+shift+w"], "command": "close_all" },
-    {"keys": ["ctrl+space"], "command": "auto_complete"}
+    {"keys": ["ctrl+space"], "command": "auto_complete"},
+    { "keys": ["ctrl+g"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
 ]
