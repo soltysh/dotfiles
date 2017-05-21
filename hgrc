@@ -14,7 +14,7 @@ pager =
 
 [pager]
 pager = LESS='FRX' less
-attend = df
+attend = df, lg
 
 [color]
 custom.rev = red
