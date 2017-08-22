@@ -138,3 +138,6 @@ autocmd FileType ruby,yaml setlocal expandtab autoindent shiftwidth=2 softtabsto
 autocmd BufRead,BufNewFile *.pp setlocal tabstop=4 shiftwidth=4 expandtab
 " Trim trailing whitespace from Ruby and Yaml files
 autocmd BufWritePre *.rb,*.yml,*.yaml :%s/\s\+$//e
+
+" Reset cursor to non-blinking on exit
+autocmd VimLeave * silent execute "!printf '\033[?12l'"
