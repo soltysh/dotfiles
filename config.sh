@@ -45,6 +45,10 @@ cpfiles=(
     ["systemd/xorg@.socket"]=".config/systemd/user/xorg@.socket"
     ["systemd/checkbattery.service"]=".config/systemd/user/checkbattery.service"
     ["systemd/checkbattery.timer"]=".config/systemd/user/checkbattery.timer"
+)
+
+declare -A sudofiles
+sudofiles=(
     ["i3/i3exit"]="/usr/local/bin"
     ["i3/checkbattery"]="/usr/local/bin"
 )
@@ -56,6 +60,10 @@ done
 
 for file in "${!cpfiles[@]}"
 do
-    cp -v "$(pwd)/${file}" "${cpfiles[${file}]}"
+    cp -v "$(pwd)/${file}" "${HOME}/${cpfiles[${file}]}"
 done
 
+for file in "${!sudofiles[@]}"
+do
+    sudo cp -v "$(pwd)/${file}" "${sudofiles[${file}]}"
+done
