@@ -3,8 +3,8 @@
 threshold=10
 
 is_battery_ok() {
-    cap=$(cat /sys/class/power_supply/BAT1/capacity)
-    stat=$(cat /sys/class/power_supply/BAT1/status)
+    cap=$(cat /sys/class/power_supply/BAT0/capacity)
+    stat=$(cat /sys/class/power_supply/BAT0/status)
     [ "$cap" -ge "$threshold" ] || [ "$stat" == "Charging" ]
 }
 

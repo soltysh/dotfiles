@@ -1,10 +1,10 @@
 # Increase vol
 "amixer set Master 10%+"
-   XF86AudioRaiseVolume
+  Mod4 + equal
 
 # Decrease vol
 "amixer set Master 10%-"
-  XF86AudioLowerVolume
+  Mod4 + minus
 
 # Mute
 "amixer set Master toggle"
