@@ -1,0 +1,36 @@
+{
+    "window.restoreWindows": "all",
+    "window.zoomLevel": 0,
+    "editor.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'Inconsolata'",
+    "editor.renderWhitespace": "boundary",
+    "explorer.decorations.colors": false,
+    "explorer.decorations.badges": false,
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    "workbench.editor.showIcons": false,
+    "workbench.iconTheme": "vs-minimal",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pid": true,
+		"**/*.pyc": true,
+		"**/*.swp": true,
+        "__pycache__": true,
+        "_output": true
+    },
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "off",
+    "go.formatOnSave": true,
+    "go.formatTool": "goimports",
+    "go.vetFlags": [
+        "-shadow",
+        "-shadowstrict"
+    ]
+}

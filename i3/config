@@ -170,6 +170,7 @@ new_window 1pixel
 
 # workspace assignment
 assign [class="Sublime"] 2:
+assign [class="Code"] 2:
 assign [class="Firefox"] 3:
 assign [class="Slack"] 4:
 assign [class="Google-chrome"] 6:
@@ -192,4 +193,8 @@ exec --no-startup-id clipit &
 exec --no-startup-id nm-applet &
 # Xbindkeys
 exec --no-startup-id xbindkeys
+# keepassx
+exec --no-startup-id keepassx2
+# fix screen when connected to external monitor
+exec --no-startup-id fix-screen
 
