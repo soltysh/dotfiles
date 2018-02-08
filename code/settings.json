@@ -34,7 +34,6 @@
         "**/.vscode": true
     },
     "go.buildOnSave": "off",
-    "go.formatOnSave": true,
     "go.formatTool": "goimports",
     "go.lintOnSave": "off",
     "go.toolsGopath": "/home/maszulik/usr/bin",
