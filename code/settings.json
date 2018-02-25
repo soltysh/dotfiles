@@ -6,6 +6,7 @@
     "editor.fontSize": 13,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
+    "editor.rulers": [80, 120],
     "explorer.decorations.badges": false,
     "explorer.decorations.colors": false,
     "workbench.activityBar.visible": true,
