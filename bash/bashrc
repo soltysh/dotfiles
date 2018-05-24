@@ -50,7 +50,7 @@ function __prompt_command() {
 
     # add git display to prompt
     local git_status="`git status -unormal 2>&1`"
-    if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
+    if ! [[ "$git_status" =~ not\ a\ git\ repo ]]; then
         # repository in unmodified state
         if [[ "$git_status" =~ nothing\ to\ commit ]]; then
             local Color_On=$Green
