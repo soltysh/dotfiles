@@ -128,7 +128,7 @@ function start_ssh_agent {
 }
 
 # less customization
-export LESS='-C -M -I -# 4'
+export LESS='-M -I -# 4'
 
 # some more ls aliases
 alias ll='ls -alF'
