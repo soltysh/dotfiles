@@ -37,10 +37,7 @@
     "go.buildOnSave": "off",
     "go.formatTool": "goimports",
     "go.lintOnSave": "off",
-    "go.toolsGopath": "/home/maszulik/usr/bin",
-    "go.vetFlags": [
-        "-shadow",
-        "-shadowstrict"
-    ],
-    "explorer.confirmDelete": false
+    "go.toolsGopath": "/home/maszulik/usr",
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": false
 }
