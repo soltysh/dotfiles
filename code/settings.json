@@ -39,5 +39,7 @@
     "go.lintOnSave": "off",
     "go.toolsGopath": "/home/maszulik/usr",
     "explorer.confirmDelete": false,
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "window.titleBarStyle": "custom",
+    "window.menuBarVisibility": "toggle"
 }
