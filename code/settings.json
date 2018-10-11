@@ -7,6 +7,7 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [80, 120],
+    "editor.tabCompletion": "on",
     "explorer.decorations.badges": false,
     "explorer.decorations.colors": false,
     "workbench.activityBar.visible": true,
@@ -17,8 +18,7 @@
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true,
     "zenMode.hideTabs": false,
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
+    "files.enableTrash": false,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -34,6 +34,8 @@
         "**/_output": true,
         "**/.vscode": true
     },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
     "go.buildOnSave": "off",
     "go.formatTool": "goimports",
     "go.lintOnSave": "off",
