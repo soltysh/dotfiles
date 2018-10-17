@@ -37,7 +37,7 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "go.buildOnSave": "off",
-    "go.formatTool": "goimports",
+    "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
     "go.toolsGopath": "/home/maszulik/usr",
     "explorer.confirmDelete": false,
