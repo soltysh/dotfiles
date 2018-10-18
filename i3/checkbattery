@@ -3,22 +3,24 @@
 threshold=10
 
 is_battery_ok() {
-    cap=$(cat /sys/class/power_supply/BAT0/capacity)
-    stat=$(cat /sys/class/power_supply/BAT0/status)
+    # sometimes when kernel updates the battery switches places, so we need
+    # to monitor both entries
+    cap=$(cat /sys/class/power_supply/BAT"${1}"/capacity)
+    stat=$(cat /sys/class/power_supply/BAT"${1}"/status)
     [ "$cap" -ge "$threshold" ] || [ "$stat" == "Charging" ]
 }
 
-hibernate() {
+poweroff() {
     i3-nagbar -m "Battery level less then "$threshold"%, turning off in 30sec!" &
     sleep 30
-    if ! is_battery_ok
+    if ! is_battery_ok 0 || ! is_battery_ok 1
     then
         sudo systemctl poweroff
     fi
 }
 
-if ! is_battery_ok
+if ! is_battery_ok 0 || ! is_battery_ok 1
 then
-    hibernate
+    poweroff
 fi
 
