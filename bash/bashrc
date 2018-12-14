@@ -148,12 +148,14 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 # go settings
-export GOPATH=$HOME/workspace/origin
+[[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
 goorigin() {
+    gvm use go1.10.6
     export GOPATH=$HOME/workspace/origin
     cd $GOPATH/src/github.com/openshift/origin
 }
 gok8s() {
+    gvm use go1.11.3
     export GOPATH=$HOME/workspace/k8s
     cd $GOPATH/src/k8s.io/kubernetes
 }
@@ -165,4 +167,5 @@ export PATH=$HOME/usr/bin:$PATH
 export LIBVIRT_DEFAULT_URI=qemu:///system
 export KUBERNETES_PROVIDER=vagrant
 export VAGRANT_DEFAULT_PROVIDER=libvirt
+
 

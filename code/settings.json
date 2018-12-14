@@ -39,9 +39,10 @@
     "go.buildOnSave": "off",
     "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
-    "go.toolsGopath": "/home/maszulik/usr",
     "explorer.confirmDelete": false,
     "breadcrumbs.enabled": false,
     "window.titleBarStyle": "custom",
-    "window.menuBarVisibility": "toggle"
+    "window.menuBarVisibility": "toggle",
+    "go.coverOnTestPackage": false,
+    "extensions.ignoreRecommendations": true
 }
