@@ -196,8 +196,6 @@ exec --no-startup-id clipit &
 exec --no-startup-id nm-applet &
 # Xbindkeys
 exec --no-startup-id xbindkeys
-# keepassx
-exec --no-startup-id keepassx2 &
 # fix screen when connected to external monitor
 exec --no-startup-id fix-screen
 
