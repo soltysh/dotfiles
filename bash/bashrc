@@ -144,7 +144,10 @@ alias oct-provision='oct provision remote all-in-one --os rhel --stage base --pr
 alias oct-deprovision='oct deprovision'
 
 function ec2list() {
-    aws ec2 describe-instances --query 'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value,PublicDnsName] | sort_by(@, &[0])' --filters "Name=tag:Name,Values=$1" --output text
+    aws ec2 describe-instances \
+        --filters "Name=instance-state-name,Values=running" "Name=tag:Name,Values=$1" \
+        --query 'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value,PublicDnsName] | sort_by(@, &[0])' \
+        --output text
 }
 
 # virutalenvwrapper configuration
