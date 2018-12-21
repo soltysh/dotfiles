@@ -120,7 +120,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-function start_ssh_agent {
+function start_ssh_agent() {
     SSH_ENV="$HOME/.ssh/environment"
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
     chmod 600 "${SSH_ENV}"
@@ -143,19 +143,23 @@ alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/W
 alias oct-provision='oct provision remote all-in-one --os rhel --stage base --provider aws --name maszulik-dev'
 alias oct-deprovision='oct deprovision'
 
+function ec2list() {
+    aws ec2 describe-instances --query 'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value,PublicDnsName] | sort_by(@, &[0])' --filters "Name=tag:Name,Values=$1" --output text
+}
+
 # virutalenvwrapper configuration
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 # go settings
 [[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
-goorigin() {
-    gvm use go1.10.6
+function goorigin() {
+    gvm use go1.10.7
     export GOPATH=$HOME/workspace/origin
     cd $GOPATH/src/github.com/openshift/origin
 }
-gok8s() {
-    gvm use go1.11.3
+function gok8s() {
+    gvm use go1.11.4
     export GOPATH=$HOME/workspace/k8s
     cd $GOPATH/src/k8s.io/kubernetes
 }
