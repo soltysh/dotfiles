@@ -5,6 +5,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
+    "editor.letterSpacing": -0.25,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [80, 120],
