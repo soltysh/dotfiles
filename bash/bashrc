@@ -156,13 +156,28 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 
 # go settings
+function __update_path() {
+    new="$1"
+    old="$2"
+    if [[ $PATH == *"$old"* ]]; then
+        export PATH="${PATH/$old/$new}"
+    elif [[ $PATH == *"$new"* ]]; then
+        : # do nothing
+    else
+        export PATH=$new:$PATH
+    fi
+}
+
 [[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
+
 function goorigin() {
+    __update_path $HOME/workspace/origin/bin $HOME/workspace/k8s/bin
     gvm use go1.10.7
     export GOPATH=$HOME/workspace/origin
     cd $GOPATH/src/github.com/openshift/origin
 }
 function gok8s() {
+    __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
     gvm use go1.11.4
     export GOPATH=$HOME/workspace/k8s
     cd $GOPATH/src/k8s.io/kubernetes
