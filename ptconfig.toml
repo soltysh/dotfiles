@@ -1,1 +1,1 @@
-ignore = ["_output", "Godeps", "vendor"]
+ignore = ["_output", "Godeps", "vendor", "zz_generated*"]
