@@ -41,6 +41,7 @@
     "workbench.editor.showIcons": false,
     "workbench.iconTheme": "vs-minimal",
     "workbench.startupEditor": "none",
+    "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "go.buildOnSave": "off",
     "go.coverOnTestPackage": false,
