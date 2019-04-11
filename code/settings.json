@@ -43,8 +43,28 @@
     "workbench.startupEditor": "none",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
+    "go.useLanguageServer": true,
+    "go.alternateTools": {
+         "go-langserver": "gopls"
+    },
+    "go.languageServerExperimentalFeatures": {
+        "format": true,
+        "autoComplete": true,
+        "diagnostics": true,
+        "goToDefinition": true,
+        "hover": true,
+        "signatureHelp": true,
+        "goToTypeDefinition": true
+    },
     "go.buildOnSave": "off",
     "go.coverOnTestPackage": false,
-    "go.formatTool": "gofmt",
-    "go.lintOnSave": "off"
+    "go.lintOnSave": "off",
+    "go.vetOnSave": "off",
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    }
 }
