@@ -45,26 +45,27 @@
     "zenMode.hideTabs": false,
     "go.useLanguageServer": true,
     "go.alternateTools": {
-         "go-langserver": "gopls"
+         "go-langserver": "bingo"
     },
     "go.languageServerExperimentalFeatures": {
-        "format": true,
         "autoComplete": true,
-        "diagnostics": true,
+        "documentSymbols": true,
+        "findReferences": true,
+        "format": true,
         "goToDefinition": true,
+        "goToTypeDefinition": true,
         "hover": true,
         "signatureHelp": true,
-        "goToTypeDefinition": true
+        "rename": true,
+        "workspaceSymbols": true
     },
+    "go.languageServerFlags": [
+        "--diagnostics-style=instant",
+        "--enhance-signature-help",
+        "--format-style=gofmt",
+    ],
     "go.buildOnSave": "off",
     "go.coverOnTestPackage": false,
     "go.lintOnSave": "off",
-    "go.vetOnSave": "off",
-    "[go]": {
-        "editor.snippetSuggestions": "none",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-    }
+    "go.vetOnSave": "off"
 }
