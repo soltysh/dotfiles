@@ -156,10 +156,6 @@ function ec2list() {
         --output text
 }
 
-# virutalenvwrapper configuration
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
-
 # go settings
 function __update_path() {
     new="$1"
