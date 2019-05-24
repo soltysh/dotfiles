@@ -6,7 +6,10 @@
     "editor.letterSpacing": 0,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "boundary",
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+        80,
+        120
+    ],
     "editor.tabCompletion": "on",
     "explorer.confirmDelete": false,
     "explorer.decorations.badges": false,
@@ -43,29 +46,24 @@
     "workbench.startupEditor": "none",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
-    "go.useLanguageServer": true,
     "go.alternateTools": {
-         "go-langserver": "bingo"
+        "go-langserver": "gopls"
     },
-    "go.languageServerExperimentalFeatures": {
-        "autoComplete": true,
-        "documentSymbols": true,
-        "findReferences": true,
-        "format": true,
-        "goToDefinition": true,
-        "goToTypeDefinition": true,
-        "hover": true,
-        "signatureHelp": true,
-        "rename": true,
-        "workspaceSymbols": true
-    },
-    "go.languageServerFlags": [
-        "--diagnostics-style=instant",
-        "--enhance-signature-help",
-        "--format-style=gofmt",
-    ],
     "go.buildOnSave": "off",
     "go.coverOnTestPackage": false,
+    "go.languageServerExperimentalFeatures": {
+        "autoComplete": true,
+        "format": false,
+    },
+    "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
-    "go.vetOnSave": "off"
+    "go.useLanguageServer": true,
+    "go.vetOnSave": "off",
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        }
+    }
 }
