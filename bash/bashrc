@@ -169,17 +169,16 @@ function __update_path() {
     fi
 }
 
-[[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
-
 function goorigin() {
     __update_path $HOME/workspace/origin/bin $HOME/workspace/k8s/bin
-    gvm use go1.10.7
+    gvm use go1.12.9
     export GOPATH=$HOME/workspace/origin
     cd $GOPATH/src/github.com/openshift/origin
 }
+
 function gok8s() {
     __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
-    gvm use go1.11.4
+    gvm use go1.12.9
     export GOPATH=$HOME/workspace/k8s
     cd $GOPATH/src/k8s.io/kubernetes
 }
@@ -189,7 +188,9 @@ export EDITOR=vim
 export PATH=$HOME/usr/bin:$PATH
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
-export KUBERNETES_PROVIDER=vagrant
-export VAGRANT_DEFAULT_PROVIDER=libvirt
 
+[[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
