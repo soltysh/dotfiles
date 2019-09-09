@@ -31,6 +31,9 @@
         "**/_output": true,
         "**/.vscode": true
     },
+    "files.watcherExclude": {
+        "**/vendor/**": true
+    },
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "window.menuBarVisibility": "toggle",
