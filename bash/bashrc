@@ -185,7 +185,7 @@ function gok8s() {
 
 # bash variables
 export EDITOR=vim
-export PATH=$HOME/usr/bin:$PATH
+export PATH=$HOME/usr/bin:$HOME/.krew/bin:$PATH
 
 export LIBVIRT_DEFAULT_URI=qemu:///system
 
