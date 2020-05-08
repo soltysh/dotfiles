@@ -8,8 +8,9 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 ! font
-URxvt*font     : xft:DejaVu Sans Mono:pixelsize=12
-URxvt*boldFont : xft:DejaVu Sans Mono:pixelsize=12
+! urxvt doesn't handle color emoji, but Symbola is a nice b&w fallback
+URxvt*font     : xft:DejaVu Sans Mono:pixelsize=12, xft:Symbola:pixelsize=12
+URxvt*boldFont : xft:DejaVu Sans Mono:pixelsize=12, xft:Symbola:pixelsize=12
 URxvt.letterSpace: -1
 
 ! clickable urls & selection to clipboard by default 
