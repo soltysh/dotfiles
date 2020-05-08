@@ -18,7 +18,6 @@ files=(
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"
     ["Xdefaults"]=".Xdefaults"
-    ["alacritty.yml"]=".alacritty.yml"
     #["fonts.conf"]=".config/fontconfig/fonts.conf"
     ["xbindkeysrc"]=".xbindkeysrc"
     ["bash/bash_profile"]=".bash_profile"
