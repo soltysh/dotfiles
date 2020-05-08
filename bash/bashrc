@@ -142,10 +142,7 @@ alias kc='kubectl'
 source ~/.bash_completion.d/complete_alias
 complete -F _complete_alias kc
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/Warsaw" date; TZ="America/New_York" date; TZ="America/Los_Angeles" date'
+alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/Warsaw" date; TZ=UTC date; TZ="America/New_York" date; TZ="America/Phoenix" date; TZ="America/Los_Angeles" date'
 alias oct-provision='oct provision remote all-in-one --os rhel --stage base --provider aws --name maszulik-dev'
 alias oct-deprovision='oct deprovision'
 
@@ -154,6 +151,10 @@ function ec2list() {
         --filters "Name=instance-state-name,Values=running" "Name=tag:Name,Values=$1" \
         --query 'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value,PublicDnsName] | sort_by(@, &[0])' \
         --output text
+}
+
+function timer() {
+    at now + $1 minute <<< 'DISPLAY=:0 i3-nagbar -t warning -m "Have a short break!"'
 }
 
 # go settings
