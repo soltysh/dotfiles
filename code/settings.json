@@ -70,7 +70,6 @@
         }
     },
     "gopls": {
-        "usePlaceholders": true,
-        "enhancedHover": true
-    }
+        "usePlaceholders": true
+    },
 }
