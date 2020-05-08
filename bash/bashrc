@@ -71,25 +71,6 @@ function __prompt_command() {
         PS1+="\[$Color_On\][$branch]\[\e[0m\] "
     fi
 
-    # add mercurial display to prompt
-    local hg_status="`hg status 2>&1`"
-    if ! [[ "$hg_status" =~ no\ repository\ found ]]; then
-        # repository in unmodified state
-        if [[ "$hg_status" == "" ]]; then
-            local Color_On="\e[32m"
-        # modified files already present in repository
-        elif [[ "$hg_status" =~ ^M\  ]]; then
-            local Color_On="\e[35m"
-        # new files in repository
-        else
-            local Color_On="\e[31m"
-        fi
-        # branch info
-        branch="`hg branch 2> /dev/null | awk '{ printf $1 }'`"
-        bookmark="`hg bookmarks 2> /dev/null | awk ' /\*/ { printf $2 \"@\" }'`"
-        PS1+="\[$Color_On\][$bookmark$branch]\[\e[0m\] "
-    fi
-
     if [[ "$VIRTUAL_ENV" != "" ]]; then
         PS1+="\[\e[1;30m\]($(basename $VIRTUAL_ENV))\[\e[0m\] "
     fi
