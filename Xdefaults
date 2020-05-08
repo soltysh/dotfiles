@@ -1,19 +1,18 @@
 ! xft configs
-Xft.autohint: 0
 Xft.dpi: 96
-Xft.antialias: 1
 Xft.rgba: rgb
-Xft.hinting: 1
-Xft.hintstyle: hintslight
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
 ! font
 ! urxvt doesn't handle color emoji, but Symbola is a nice b&w fallback
-URxvt*font     : xft:DejaVu Sans Mono:pixelsize=12, xft:Symbola:pixelsize=12
-URxvt*boldFont : xft:DejaVu Sans Mono:pixelsize=12, xft:Symbola:pixelsize=12
-URxvt.letterSpace: -1
+URxvt*font     : xft:DejaVu Sans Mono:pixelsize=14, xft:Symbola:pixelsize=14
+URxvt.letterSpace: -2
 
-! clickable urls & selection to clipboard by default 
+! clickable urls & selection to clipboard by default
 ! resize-font from https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font
 URxvt.perl-ext-common : default,matcher,selection-to-clipboard,resize-font
 URxvt.urlLauncher     : firefox
@@ -36,42 +35,42 @@ URxvt*scrollWithBuffer : true
 ! scroll to bottom when a non-special key is pressed
 URxvt*scrollTtyKeypress : true
 ! disable buffer in secondary screen (eg. less)
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
 ! disable iso14755 mode
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 ! colors
-URxvt*background: #080808
-URxvt*foreground: #c2c2c2
+URxvt*background: #232627
+URxvt*foreground: #fcfcfc
 ! black
-URxvt.color0  : #000000
-URxvt.color8  : #686868
+URxvt.color0  : #232627
+URxvt.color8  : #7f8c8d
 ! red
-URxvt.color1  : #b21818
-URxvt.color9  : #ff5454
+URxvt.color1  : #ed1515
+URxvt.color9  : #c0392b
 ! green
-URxvt.color2  : #18b218
-URxvt.color10 : #54ff54
+URxvt.color2  : #11d116
+URxvt.color10 : #1cdc9a
 ! yellow
-URxvt.color3  : #b25818
-URxvt.color11 : #ffff54
+URxvt.color3  : #f67400
+URxvt.color11 : #fdbc4b
 ! blue
-URxvt.color4  : #1818b2
-URxvt.color12 : #5454ff
+URxvt.color4  : #1d99f3
+URxvt.color12 : #3daee9
 ! magenta
-URxvt.color5  : #b218b2
-URxvt.color13 : #ff54ff
+URxvt.color5  : #9b59b6
+URxvt.color13 : #8e44ad
 ! cyan
-URxvt.color6  : #18b2b2
-URxvt.color14 : #54ffff
+URxvt.color6  : #1abc9c
+URxvt.color14 : #16a085
 ! white
-URxvt.color7  : #b2b2b2
+URxvt.color7  : #fcfcfc
 URxvt.color15 : #ffffff
 
-! More colors
+! More colors (for man pages)
 URxvt.colorIT : #87af5f
-URxvt.colorBD : #d7d7d7
+URxvt.colorBD : #c0c0c0
 URxvt.colorUL : #87afd7
 

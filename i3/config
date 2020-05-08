@@ -136,7 +136,7 @@ bindsym $mod+x move workspace to output right
 # finds out, if available)
 bar {
     colors {
-        background #080808
+        background #181a1b
     }
     strip_workspace_numbers yes
     status_command i3status --config ~/.i3/i3status.conf
