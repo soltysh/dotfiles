@@ -49,7 +49,7 @@ function __prompt_command() {
     PS1+="\[$Green\]\u\[$Color_Off\]@\[$Green\]\h\[$Color_Off\]:\[$Blue\]\w\[$Color_Off\] "
 
     # add git display to prompt
-    local git_status="`git status -unormal 2>&1`"
+    local git_status="$(git status -unormal 2>&1)"
     if ! [[ "$git_status" =~ not\ a\ git\ repo ]]; then
         # repository in unmodified state
         if [[ "$git_status" =~ nothing\ to\ commit ]]; then
@@ -81,15 +81,6 @@ function __prompt_command() {
 
 PROMPT_COMMAND=__prompt_command
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -100,13 +91,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-
-function start_ssh_agent() {
-    SSH_ENV="$HOME/.ssh/environment"
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-}
 
 # less customization
 export LESS='-M -I -# 4'
@@ -124,8 +108,24 @@ source ~/.bash_completion.d/complete_alias
 complete -F _complete_alias kc
 
 alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/Warsaw" date; TZ=UTC date; TZ="America/New_York" date; TZ="America/Phoenix" date; TZ="America/Los_Angeles" date'
-alias oct-provision='oct provision remote all-in-one --os rhel --stage base --provider aws --name maszulik-dev'
-alias oct-deprovision='oct deprovision'
+function start_ssh_agent() {
+
+
+
+function start_ssh_agent() {
+    SSH_ENV="$HOME/.ssh/environment"
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+}
+
+function vscode() {
+    if [[ "$#" == "0" ]]; then
+        /usr/bin/code
+    else
+        /usr/bin/code /home/maszulik/workspace/"$1".code-workspace
+    fi
+}
 
 function ec2list() {
     aws ec2 describe-instances \
@@ -153,26 +153,23 @@ function __update_path() {
 
 function goorigin() {
     __update_path $HOME/workspace/origin/bin $HOME/workspace/k8s/bin
-    gvm use go1.12.9
+    gvm use go1.15
     export GOPATH=$HOME/workspace/origin
-    cd $GOPATH/src/github.com/openshift/origin
+    export GOFLAGS=-mod=vendor
+    cd $GOPATH/src/github.com/openshift
 }
 
 function gok8s() {
     __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
-    gvm use go1.12.9
+    gvm use go1.15
     export GOPATH=$HOME/workspace/k8s
+    export GOFLAGS=-mod=vendor
     cd $GOPATH/src/k8s.io/kubernetes
 }
 
 # bash variables
 export EDITOR=vim
-export PATH=$HOME/usr/bin:$HOME/.krew/bin:$PATH
-
-export LIBVIRT_DEFAULT_URI=qemu:///system
+export PATH=$HOME/usr/bin:$HOME/.krew/bin:$HOME/.local/bin/:$PATH
 
 [[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
