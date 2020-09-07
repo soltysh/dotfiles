@@ -9,8 +9,8 @@ Xft.lcdfilter: lcddefault
 
 ! font
 ! urxvt doesn't handle color emoji, but Symbola is a nice b&w fallback
-URxvt*font     : xft:DejaVu Sans Mono:pixelsize=14, xft:Symbola:pixelsize=14
-URxvt.letterSpace: -2
+URxvt*font     : xft:DejaVu Sans Mono:pixelsize=12, xft:Symbola:pixelsize=12
+URxvt.letterSpace: -1
 
 ! clickable urls & selection to clipboard by default
 ! resize-font from https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font
