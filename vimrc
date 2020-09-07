@@ -2,6 +2,8 @@
 filetype on
 filetype plugin indent on
 syntax on
+" from https://github.com/sickill/vim-monokai
+colorscheme monokai
 
 " default file encoding to utf-8
 set encoding=utf-8
