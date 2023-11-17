@@ -59,6 +59,8 @@ set cursorline
 " mark nonprintable characters
 set listchars=eol:$,tab:»·,trail:.,extends:>
 set list
+" no bells
+set noerrorbells visualbell t_vb=
 
 " status line
 set laststatus=2

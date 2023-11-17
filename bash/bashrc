@@ -22,6 +22,9 @@ HISTTIMEFORMAT='%F %T '
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# disable bell
+set bell-style none
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -88,8 +91,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto -N'
 
     alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
 fi
 
 # less customization
@@ -153,7 +154,7 @@ function __update_path() {
 
 function goorigin() {
     __update_path $HOME/workspace/origin/bin $HOME/workspace/k8s/bin
-    gvm use go1.15
+    gvm use go1.21.4
     export GOPATH=$HOME/workspace/origin
     export GOFLAGS=-mod=vendor
     cd $GOPATH/src/github.com/openshift
@@ -161,9 +162,10 @@ function goorigin() {
 
 function gok8s() {
     __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
-    gvm use go1.15
+    gvm use go1.21.4
     export GOPATH=$HOME/workspace/k8s
     export GOFLAGS=-mod=vendor
+    export FORCE_HOST_GO=true
     cd $GOPATH/src/k8s.io/kubernetes
 }
 

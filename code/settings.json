@@ -10,6 +10,7 @@
         80,
         120
     ],
+    "editor.stickyScroll.enabled": true,
     "editor.tabCompletion": "on",
     "explorer.confirmDelete": false,
     "explorer.decorations.badges": false,
@@ -36,32 +37,24 @@
     },
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "security.workspace.trust.untrustedFiles": "open",
     "window.menuBarVisibility": "toggle",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "window.titleBarStyle": "custom",
-    "window.restoreWindows": "all",
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": false,
+    "window.restoreWindows": "none",
     "workbench.colorTheme": "Monokai Dark Soda",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.showIcons": false,
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "vs-minimal",
     "workbench.startupEditor": "none",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
-    "go.buildOnSave": "off",
     "go.coverOnTestPackage": false,
     "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
+    "go.toolsManagement.autoUpdate": true,
     "go.vetOnSave": "off",
-    "go.useLanguageServer": true,
-    "go.alternateTools": {
-        "go-langserver": "gopls"
-    },
-    "go.languageServerExperimentalFeatures": {
-        "autoComplete": true,
-        "format": false
-    },
     "[go]": {
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
@@ -70,6 +63,11 @@
         }
     },
     "gopls": {
-        "usePlaceholders": true
+        "ui.completion.usePlaceholders": true
     },
+    "git.mergeEditor": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "workbench.activityBar.visible": false
 }

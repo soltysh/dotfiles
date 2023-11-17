@@ -168,7 +168,7 @@ new_window 1pixel
 # workspace assignment
 assign [class="Sublime"] 2:
 assign [class="Code"] 2:
-assign [class="Firefox"] 3:
+assign [class="firefox"] 3:
 assign [class="Slack"] 4:
 assign [class="Spotify"] 5:
 assign [class="Google-chrome"] 6:
@@ -183,9 +183,18 @@ bindsym $mod+minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # monitor standby
 exec --no-startup-id xset dpms 300
-# clipit
+# disable bell
+exec --no-startup-id xset -b
+# clipboard
 exec --no-startup-id clipit &
-# nm-applet
+# network monitor
 exec --no-startup-id nm-applet &
+# bluetooth
+exec --no-startup-id blueman-applet &
+# pause dunst notifications
+exec --no-startup-id dunstctl set-paused true &
 # fix screen when connected to external monitor
 exec --no-startup-id fix-screen
+# turn on redshift
+exec --no-startup-id redshift -c ~/.config/redshift.conf &
+
