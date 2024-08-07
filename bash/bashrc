@@ -104,11 +104,13 @@ alias la='ls -A'
 alias l='ls -CF'
 alias myip='ip -br -c a'
 alias kc='kubectl'
+alias tw='timew'
 
 # setup kc alias completion
 # https://github.com/cykerway/complete-alias
 source ~/.bash_completion.d/complete_alias
 complete -F _complete_alias kc
+complete -F _complete_alias tw
 
 alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/Warsaw" date; TZ=UTC date; TZ="America/New_York" date; TZ="America/Phoenix" date; TZ="America/Los_Angeles" date'
 function start_ssh_agent() {
