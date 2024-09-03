@@ -1,6 +1,6 @@
 [user]
 	name = Maciej Szulik
-	email = soltysh@gmail.com
+	email = maciej@defenseunicorns.com
 
 [alias]
 	st = status -sb
@@ -30,3 +30,6 @@
 [push]
 	default = matching
 
+[commit]
+	template = /home/maciej/.git_commit_template
+	gpgsign = true

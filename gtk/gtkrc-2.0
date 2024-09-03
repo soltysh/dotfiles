@@ -1,7 +1,7 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "/home/soltysh/.gtkrc-2.0.mine"
+include "/home/maciej/.gtkrc-2.0.mine"
 gtk-theme-name="Greybird"
 gtk-icon-theme-name="Adwaita"
 gtk-font-name="Sans 9"

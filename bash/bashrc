@@ -112,10 +112,7 @@ source ~/.bash_completion.d/complete_alias
 complete -F _complete_alias kc
 complete -F _complete_alias tw
 
-alias dates='TZ="Australia/Brisbane" date; TZ="Asia/Shanghai" date; TZ="Europe/Warsaw" date; TZ=UTC date; TZ="America/New_York" date; TZ="America/Phoenix" date; TZ="America/Los_Angeles" date'
-function start_ssh_agent() {
-
-
+alias dates='TZ="Europe/Warsaw" date; TZ=UTC date; TZ="US/Eastern" date; TZ="US/Central" date; TZ="US/Mountain" date; TZ="US/Pacific" date'
 
 function start_ssh_agent() {
     SSH_ENV="$HOME/.ssh/environment"
@@ -128,15 +125,8 @@ function vscode() {
     if [[ "$#" == "0" ]]; then
         /usr/bin/code
     else
-        /usr/bin/code /home/maszulik/workspace/"$1".code-workspace
+        /usr/bin/code /home/maciej/workspace/"$1".code-workspace
     fi
-}
-
-function ec2list() {
-    aws ec2 describe-instances \
-        --filters "Name=instance-state-name,Values=running" "Name=tag:Name,Values=$1" \
-        --query 'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value,PublicDnsName] | sort_by(@, &[0])' \
-        --output text
 }
 
 function timer() {
@@ -156,17 +146,9 @@ function __update_path() {
     fi
 }
 
-function goorigin() {
-    __update_path $HOME/workspace/origin/bin $HOME/workspace/k8s/bin
-    gvm use go1.21.4
-    export GOPATH=$HOME/workspace/origin
-    export GOFLAGS=-mod=vendor
-    cd $GOPATH/src/github.com/openshift
-}
-
 function gok8s() {
     __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
-    gvm use go1.21.4
+    gvm use go1.22.6
     export GOPATH=$HOME/workspace/k8s
     export GOFLAGS=-mod=vendor
     export FORCE_HOST_GO=true
@@ -177,5 +159,7 @@ function gok8s() {
 export EDITOR=vim
 export PATH=$HOME/usr/bin:$HOME/.krew/bin:$HOME/.local/bin/:$PATH
 
-[[ -s "/home/maszulik/.gvm/scripts/gvm" ]] && source "/home/maszulik/.gvm/scripts/gvm"
+[[ -s "/home/maciej/.gvm/scripts/gvm" ]] && source "/home/maciej/.gvm/scripts/gvm"
+# don't use go version auto-switching on cd
+unset -f cd
 
