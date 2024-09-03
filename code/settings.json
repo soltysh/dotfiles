@@ -1,5 +1,15 @@
 {
     "breadcrumbs.enabled": false,
+    "cSpell.enabled": true,
+    "cSpell.userWords": [
+        "conformant",
+        "kubernetes",
+        "mitigations",
+        "nightlies",
+        "openshift",
+        "quantile",
+        "untrusted"
+    ],
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
@@ -49,7 +59,6 @@
     "workbench.iconTheme": "vs-minimal",
     "workbench.startupEditor": "none",
     "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
     "go.coverOnTestPackage": false,
     "go.formatTool": "gofmt",
     "go.lintOnSave": "off",
@@ -59,15 +68,21 @@
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": "never"
         }
     },
     "gopls": {
         "ui.completion.usePlaceholders": true
     },
     "git.mergeEditor": false,
+    "calva.prettyPrintingOptions": {
+        "printEngine": "pprint",
+        "enabled": true,
+        "width": 120,
+        "maxLength": 50
+    },
     "[python]": {
         "editor.formatOnType": true
     },
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.location": "hidden"
 }

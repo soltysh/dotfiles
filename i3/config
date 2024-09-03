@@ -100,6 +100,13 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# assign workspace to specific output
+workspace 1: output DisplayPort-9
+workspace 2: output DisplayPort-9
+workspace 3: output DisplayPort-8
+workspace 4: output DisplayPort-9
+workspace 5: output DisplayPort-8
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
     # These bindings trigger as soon as you enter the resize mode
@@ -163,7 +170,9 @@ bindsym $mod+Shift+e mode "$mode_system"
 workspace_auto_back_and_forth yes
 hide_edge_borders both
 focus_follows_mouse no
-new_window 1pixel
+default_border pixel 1
+default_floating_border pixel 1
+for_window [all] border pixel 1
 
 # workspace assignment
 assign [class="Sublime"] 2:
@@ -195,6 +204,8 @@ exec --no-startup-id blueman-applet &
 exec --no-startup-id dunstctl set-paused true &
 # fix screen when connected to external monitor
 exec --no-startup-id fix-screen
+# fix audio such that default is the one in the laptop
+exec --no-startup-id fix-audio
 # turn on redshift
 exec --no-startup-id redshift -c ~/.config/redshift.conf &
 
