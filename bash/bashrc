@@ -148,7 +148,7 @@ function __update_path() {
 
 function gok8s() {
     __update_path $HOME/workspace/k8s/bin $HOME/workspace/origin/bin
-    gvm use go1.22.6
+    gvm use go1.23.0
     export GOPATH=$HOME/workspace/k8s
     export GOFLAGS=-mod=vendor
     export FORCE_HOST_GO=true
