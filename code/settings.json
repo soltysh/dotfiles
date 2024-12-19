@@ -84,5 +84,7 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.empty.hint": "hidden",
+    "diffEditor.hideUnchangedRegions.enabled": true
 }
