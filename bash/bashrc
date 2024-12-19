@@ -158,6 +158,7 @@ function gok8s() {
 # bash variables
 export EDITOR=vim
 export PATH=$HOME/usr/bin:$HOME/.krew/bin:$HOME/.local/bin/:$PATH
+export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 [[ -s "/home/maciej/.gvm/scripts/gvm" ]] && source "/home/maciej/.gvm/scripts/gvm"
 # don't use go version auto-switching on cd
