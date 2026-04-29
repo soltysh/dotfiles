@@ -6,8 +6,9 @@
         "kubernetes",
         "mitigations",
         "nightlies",
-        "openshift",
+        "preconfigured",
         "quantile",
+        "subresources",
         "untrusted"
     ],
     "editor.fontFamily": "Fira Code",
@@ -86,5 +87,27 @@
     },
     "workbench.activityBar.location": "hidden",
     "workbench.editor.empty.hint": "hidden",
-    "diffEditor.hideUnchangedRegions.enabled": true
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "redhat.telemetry.enabled": false,
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/zarf-dev/zarf/main/zarf.schema.json": "zarf.yaml",
+        "https://raw.githubusercontent.com/defenseunicorns/maru-runner/refs/heads/main/tasks.schema.json": "tasks.yaml"
+    },
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "chat.viewSessions.enabled": false
 }
