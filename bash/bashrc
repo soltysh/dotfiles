@@ -165,9 +165,10 @@ function gozarf() {
 
 # bash variables
 export EDITOR=vim
-export PATH=$HOME/usr/bin:$HOME/.krew/bin:$HOME/.local/bin/:$PATH
+export PATH=$HOME/.krew/bin:$HOME/.local/bin/:$PATH
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 # don't use go version auto-switching on cd
 unset -f cd
 
+. "$HOME/.cargo/env"
