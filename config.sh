@@ -12,8 +12,7 @@ link() {
 
 declare -A files
 files=(
-    #["ackrc"]=".ackrc"
-    ["ptconfig.toml"]=".ptconfig.toml"
+    ["ripgreprc"]=".config/ripgreprc"
     ["gitconfig"]=".gitconfig"
     ["hgrc"]=".hgrc"
     ["vimrc"]=".vimrc"

@@ -167,6 +167,7 @@ function gozarf() {
 export EDITOR=vim
 export PATH=$HOME/.krew/bin:$HOME/.local/bin/:$PATH
 export LIBVIRT_DEFAULT_URI="qemu:///system"
+export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 
 # don't use go version auto-switching on cd
 unset -f cd
