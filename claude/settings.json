@@ -4,10 +4,6 @@
     "DISABLE_ERROR_REPORTING": "1"
   },
   "permissions": {
-    "allow": [
-      "Read(~/workspace/k8s/src/k8s.io/community/contributors/devel/sig-architecture/api-conventions.md)",
-      "Read(~/workspace/k8s/src/k8s.io/community/contributors/devel/sig-architecture/api_changes.md)"
-    ],
     "deny": [
       "Bash(rm -rf *)",
       "Bash(rm -fr *)",

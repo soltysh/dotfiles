@@ -72,6 +72,8 @@ When adding dependencies, CI actions, or tool versions, always look up the curre
 
 Prefer `ast-grep` over ripgrep when searching for code structure (function calls, class definitions, imports, pattern matching across arguments). Use ripgrep for literal strings and log messages.
 
+When asked to analyze or review files, ALWAYS use the Read tool to load file contents first. Do NOT use `bash cat`, `bash head`, or shell commands as substitutes for the Read tool. Do NOT output placeholder code blocks or claim inability to access files.
+
 ### Bash
 
 All scripts must start with `set -euo pipefail`. Lint: `shellcheck script.sh && shfmt -d script.sh`

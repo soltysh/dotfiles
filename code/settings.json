@@ -49,7 +49,6 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "window.menuBarVisibility": "toggle",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
     "window.titleBarStyle": "custom",
     "window.restoreWindows": "none",
