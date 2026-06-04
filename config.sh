@@ -22,6 +22,7 @@ files=(
     ["bash/bash_profile"]=".bash_profile"
     ["bash/bashrc"]=".bashrc"
     ["code/settings.json"]=".config/Code/User/settings.json"
+    ["zed/settings.json"]=".config/zed/settings.json"
     ["claude/CLAUDE.md"]=".claude/CLAUDE.md"
     ["claude/settings.json"]=".claude/settings.json"
     #["sublime/Anaconda.sublime-settings"]=".config/sublime-text-3/Packages/User/Anaconda.sublime-settings"

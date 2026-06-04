@@ -175,7 +175,7 @@ default_floating_border pixel 1
 for_window [all] border pixel 1
 
 # workspace assignment
-assign [class="Sublime"] 2:
+assign [class="dev.zed.Zed"] 2:
 assign [class="Code"] 2:
 assign [class="firefox"] 3:
 assign [class="Slack"] 4:
