@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "scrollbar": {
+    "git_diff": true
+  },
+  "cli_default_open_behavior": "existing_window",
+  "use_system_prompts": false,
+  "use_system_path_prompts": false,
   "show_whitespaces": "boundary",
   "proxy": "",
   "agent_servers": {
@@ -32,7 +38,7 @@
     "agent_review": true,
     "selections_menu": true,
     "quick_actions": false,
-    "breadcrumbs": false,
+    "breadcrumbs": true,
   },
   "inline_code_actions": true,
   "gutter": {
@@ -95,6 +101,7 @@
     "trust_all_worktrees": true,
   },
   "project_panel": {
+    "default_width": 300.0,
     "hide_gitignore": true,
     "scrollbar": {
       "horizontal_scroll": true,
@@ -104,7 +111,7 @@
     "file_icons": true,
     "button": true,
     "dock": "left",
-    "git_status": true,
+    "git_status": false,
   },
   "preview_tabs": {
     "enable_preview_file_from_code_navigation": true,
