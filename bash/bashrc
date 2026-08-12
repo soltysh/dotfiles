@@ -154,6 +154,13 @@ function gok8s() {
     cd $GOPATH/src/k8s.io/kubernetes
 }
 
+function gok0s() {
+    __update_path $HOME/workspace/k8s/bin $HOME/workspace/unicorns/bin
+    export GOPATH=$HOME/workspace/k8s
+    export GOFLAGS=""
+    cd $GOPATH/src/github.com/k0sproject/k0s
+}
+
 function gounicorns() {
     __update_path $HOME/workspace/unicorns/bin $HOME/workspace/k8s/bin
     export GOPATH=$HOME/workspace/unicorns
