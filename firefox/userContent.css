@@ -9,3 +9,13 @@ input[type="radio"],
 input[type="checkbox"] {
     -moz-appearance: none !important;
 }
+
+/* Force Noto Sans on github.com */
+@-moz-document domain("github.com") {
+  :root {
+    --fontStack-sansSerif: sans, sans-serif, "Segoe UI Emoji" !important;
+    --fontStack-sansSerifDisplay: sans, sans-serif, "Segoe UI Emoji" !important;
+    --fontStack-system: sans, sans-serif, "Segoe UI Emoji" !important;
+  }
+}
+
