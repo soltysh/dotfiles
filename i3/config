@@ -178,7 +178,7 @@ for_window [all] border pixel 1
 assign [class="dev.zed.Zed"] 2:
 assign [class="Code"] 2:
 assign [class="firefox"] 3:
-assign [class="Slack"] 4:
+assign [class="slack"] 4:
 assign [class="discord"] 4:
 assign [class="Spotify"] 5:
 assign [class="Google-chrome"] 6:

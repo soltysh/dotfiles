@@ -1,0 +1,53 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": [
+      "~/.config/opencode/skills"
+    ]
+  },
+  "plugin": [
+    "@dietrichgebert/ponytail"
+  ],
+  "mcp": {
+    "serena": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide",
+        "--project",
+        "{cwd}"
+      ],
+      "environment": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    "lean-lsp": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "uvx",
+        "lean-lsp-mcp"
+      ]
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "..."
+      }
+    }
+  },
+  "permission": {
+    "ask": "allow",
+    "bash": "ask",
+    "edit": "deny",
+    "write": "deny"
+  },
+  "instructions": [
+    "RULE: You must NEVER use the 'edit' or 'write' tools to modify code. These tools are permanently denied.\n\nAll code modifications MUST go through the Serena MCP tools (serena_replace_symbol_body, serena_insert_after_symbol, serena_insert_before_symbol, serena_replace_content, serena_rename_symbol, serena_safe_delete_symbol) or the tree-sitter MCP tools.\n\nWhen you need to modify code:\n1. First read and understand the code semantically using serena_get_symbols_overview, serena_find_symbol, serena_read_memory, or tree-sitter tools.\n2. Then apply changes using the appropriate Serena symbol-level tool (replace_symbol_body, insert_after_symbol, etc.).\n3. For bulk or regex-based replacements across a file, use serena_replace_content.\n4. Never fall back to raw text editing. If a Serena tool cannot express the change cleanly, then fall back on the tree-sitter MCP. Before writing ANY code, ALWAYS activate the `ponytail` skill."
+  ]
+}

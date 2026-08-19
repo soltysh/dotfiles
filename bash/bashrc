@@ -178,6 +178,7 @@ function gozarf() {
 # bash variables
 export EDITOR=vim
 export PATH=$HOME/.krew/bin:$HOME/.local/bin/:$PATH
+export PATH=/home/maciej/.opencode/bin:$PATH
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 # use fzf for ctrl+r history search

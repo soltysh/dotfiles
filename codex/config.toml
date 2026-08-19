@@ -2,6 +2,7 @@ model_reasoning_effort = "medium"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 commit_attribution = ""
+model = "gpt-5.6-terra"
 
 [sandbox_workspace_write]
 writable_roots = []
