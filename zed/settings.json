@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "edit_predictions": {
+    "provider": "zed"
+  },
   "scrollbar": {
     "git_diff": true
   },
@@ -16,6 +19,12 @@
   "show_whitespaces": "boundary",
   "proxy": "",
   "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "github-copilot-cli": {
+      "type": "registry"
+    },
     "claude-acp": {
       "type": "registry"
     }
@@ -91,7 +100,7 @@
     "show_project_items": true,
     "show_branch_name": true,
     "show_menus": false,
-    "show_sign_in": false,
+    "show_sign_in": true,
   },
   "telemetry": {
     "diagnostics": false,

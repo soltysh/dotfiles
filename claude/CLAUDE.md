@@ -1,6 +1,6 @@
 # Global Development Standards
 
-Global instructions for all projects. Project-specific CLAUDE.md files override these defaults.
+Global instructions for all projects. Project-specific CLAUDE.md and AGENTS.md files override these defaults.
 
 - Use skills proactively when they match the task — suggest relevant ones, don't block on them
 
