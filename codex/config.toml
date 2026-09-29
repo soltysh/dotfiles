@@ -1,8 +1,10 @@
 model_reasoning_effort = "medium"
 approval_policy = "on-request"
 sandbox_mode = "workspace-write"
-commit_attribution = ""
-model = "gpt-5.6-terra"
+model = "gpt-6-sol"
+
+[features]
+codex_git_commit = false
 
 [sandbox_workspace_write]
 writable_roots = []
@@ -13,4 +15,5 @@ inherit = "core"
 
 [tui.model_availability_nux]
 "gpt-5.6-sol" = 2
+gpt-6-astra = 4
 

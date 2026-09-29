@@ -9,6 +9,7 @@
     "sessionUrl": false
   },
   "permissions": {
+    "defaultMode": "manual",
     "deny": [
       "Bash(rm -rf *)",
       "Bash(rm -fr *)",

@@ -20,6 +20,9 @@
   "proxy": "",
   "agent_servers": {
     "codex-acp": {
+      "default_config_options": {
+        "mode": "read-only"
+      },
       "type": "registry"
     },
     "github-copilot-cli": {
@@ -83,6 +86,7 @@
     "dock": "left",
   },
   "agent": {
+    "notify_when_agent_waiting": "never",
     "dock": "right",
     "button": true,
     "favorite_models": [],
