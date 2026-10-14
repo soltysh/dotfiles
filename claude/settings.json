@@ -9,7 +9,6 @@
     "sessionUrl": false
   },
   "permissions": {
-    "defaultMode": "manual",
     "deny": [
       "Bash(rm -rf *)",
       "Bash(rm -fr *)",
@@ -29,7 +28,8 @@
       "Read(~/.git-credentials)",
       "Read(~/.docker/config.json)",
       "Read(~/.kube/**)"
-    ]
+    ],
+    "defaultMode": "manual"
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true

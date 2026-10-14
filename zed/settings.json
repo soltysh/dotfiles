@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "remove_trailing_whitespace_on_save": true,
   "edit_predictions": {
     "provider": "zed"
   },
