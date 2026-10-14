@@ -1,0 +1,24 @@
+github = "off"
+
+[setup]
+prompt_for_pat = false
+
+[vm]
+vcpu_count = 2
+mem_size_mib = 4096
+template_size_gib = 10
+
+[claude]
+config_dir = "~/.claude"
+
+[codex]
+config_dir = "~/.codex"
+
+[profiles.go]
+apt_packages = ["ripgrep", "fd-find", "jq", "shellcheck", "shfmt", "bat"]
+post_install = "ln -sf /usr/bin/fdfind /usr/bin/fd; ln -sf /usr/bin/batcat /usr/bin/bat"
+
+[[guest_files]]
+source = "~/.local/bin/ast-grep"
+destination = "~/.local/bin/ast-grep"
+
