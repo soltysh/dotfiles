@@ -184,7 +184,4 @@ export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 # use fzf for ctrl+r history search
 #source /usr/share/fzf/shell/key-bindings.bash
 
-# don't use go version auto-switching on cd
-unset -f cd
-
 . "$HOME/.cargo/env"
