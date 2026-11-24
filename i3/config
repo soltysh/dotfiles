@@ -14,7 +14,7 @@ font pango:DejaVu Sans Mono, Awesome 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt256c
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -202,17 +202,18 @@ exec --no-startup-id xset dpms 300 300 300
 # disable bell
 exec --no-startup-id xset -b
 # clipboard
-exec --no-startup-id clipit &
+exec --no-startup-id clipit
 # network monitor
-exec --no-startup-id nm-applet &
+exec --no-startup-id nm-applet
 # bluetooth
-exec --no-startup-id blueman-applet &
+exec --no-startup-id blueman-applet
 # pause dunst notifications
-exec --no-startup-id dunstctl set-paused true &
+exec --no-startup-id dunstctl set-paused true
 # fix screen when connected to external monitor
 exec --no-startup-id fix-screen
 # fix audio such that default is the one in the laptop
 exec --no-startup-id fix-audio
 # turn on redshift
-exec --no-startup-id redshift -c ~/.config/redshift.conf &
-
+exec --no-startup-id redshift -c ~/.config/redshift.conf
+# turn on picom, to enable dimming alacritty
+exec --no-startup-id picom
