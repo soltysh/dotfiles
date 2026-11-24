@@ -14,9 +14,13 @@ config_dir = "~/.claude"
 [codex]
 config_dir = "~/.codex"
 
-[profiles.go]
-apt_packages = ["ripgrep", "fd-find", "jq", "shellcheck", "shfmt", "bat"]
+[profiles.tools]
+apt_packages = ["ripgrep", "fd-find", "jq", "shellcheck", "shfmt", "bat", "bubblewrap"]
 post_install = "ln -sf /usr/bin/fdfind /usr/bin/fd; ln -sf /usr/bin/batcat /usr/bin/bat"
+
+[[guest_files]]
+source = "~/.claude.json"
+destination = "~/.claude.json"
 
 [[guest_files]]
 source = "~/.local/bin/ast-grep"
